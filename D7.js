@@ -14,6 +14,7 @@ concStrings("Ciao", "federico");
   Scrivi una funzione che torni un array di 10 elementi; ognuno di essi deve essere un valore random compreso tra 0 e 100 (incluso).
 */
 const randomArr = [];
+
 function randomCento() {
   const n = 10;
 
@@ -31,14 +32,10 @@ console.log(randomCento());
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
 function getEven(array) {
-  const evenArr = [];
-  array.forEach((e) => {
-    if (e % 2 === 0) {
-      evenArr.push(e);
-    }
-  });
+  let even = [];
+  even = array.filter((n) => n % 2 === 0);
 
-  return evenArr;
+  return even;
 }
 
 console.log(getEven(randomArr));
