@@ -31,8 +31,8 @@ console.log(randomCento());
 /* ESERCIZIO 3 (filter)
   Scrivi una funzione per ricavare solamente i valori PARI da un array composto da soli valori numerici
 */
+let even = [];
 function getEven(array) {
-  let even = [];
   even = array.filter((n) => n % 2 === 0);
 
   return even;
@@ -43,6 +43,13 @@ console.log(getEven(randomArr));
 /* ESERCIZIO 4 (forEach)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+function sum(array) {
+  let sum = 0;
+  array.forEach((e) => (sum += e));
+  return sum;
+}
+
+console.log(sum(even));
 
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
