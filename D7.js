@@ -54,6 +54,11 @@ console.log(sum(even));
 /* ESERCIZIO 5 (reduce)
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
+function reduceSum(array) {
+  return array.reduce((acc, curr) => acc + curr, 0);
+}
+
+console.log(reduceSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
 
 /* ESERCIZIO 6 (map)
   Scrivi una funzione che, dato un array di soli numeri e un numero n come parametri, ritorni un secondo array con tutti i valori del precedente incrementati di n
@@ -75,6 +80,19 @@ console.log(stringLength);
 /* ESERCIZIO 8 (forEach o for)
   Scrivi una funzione per creare un array contenente tutti i valori DISPARI da 1 a 99.
 */
+function onlyOdd() {
+  const oddArr = [];
+
+  for (let i = 0; i < 100; i++) {
+    if (i % 2 !== 0) {
+      oddArr.push(i);
+    }
+  }
+
+  return oddArr;
+}
+
+console.log(onlyOdd());
 
 /* Questo array di film verrà usato negli esercizi a seguire. Non modificarlo e scorri oltre per riprendere gli esercizi :) */
 const movies = [
