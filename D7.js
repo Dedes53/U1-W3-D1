@@ -245,8 +245,11 @@ console.log(onlyCurrentMillennium(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-const reduceYear = movies.reduce((acc, e) => acc + Number(e.Year), 0); //Number(e.year) è necessario in quanto Year dentro movies è una stringa
-console.log(reduceYear);
+const reducedYears = function (array) {
+  return array.reduce((acc, e) => acc + parseInt(e.Year), 0); //parseInt serve poichè Year dentro a movies non è un numero, bensì una stringa
+};
+
+console.log(reducedYears(movies));
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
