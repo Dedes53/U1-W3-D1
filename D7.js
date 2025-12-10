@@ -202,7 +202,7 @@ const movies = [
 const getOldest = function (array) {
   let oldestMovie = array[0];
   array.forEach((e) => {
-    if (e.year < oldestMovie.year) {
+    if (e.Year < oldestMovie.Year) {
       oldestMovie = e;
     }
   });
@@ -233,7 +233,7 @@ console.log(titleArr);
 */
 
 const onlyCurrentMillennium = function (array) {
-  return array.filter((movie) => movie.year >= 2000);
+  return array.filter((movie) => movie.Year >= 2000);
 };
 
 console.log(onlyCurrentMillennium(movies));
@@ -254,3 +254,10 @@ console.log(findMovieByID("tt0848228"));
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+const findAndDelete = function (array, year) {
+  const indexMovieFound = array.findIndex((movie) => movie.Year === year);
+  array.splice(indexMovieFound, 1);
+
+  return array;
+};
+console.log(findAndDelete(movies, "2000"));
