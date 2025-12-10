@@ -55,7 +55,7 @@ console.log(sum(even));
   Scrivi una funzione per sommare i numeri contenuti in un array
 */
 function reduceSum(array) {
-  return array.reduce((acc, curr) => acc + curr, 0);
+  return array.reduce((acc, e) => acc + e, 0);
 }
 
 console.log(reduceSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]));
@@ -241,6 +241,8 @@ console.log(onlyCurrentMillennium(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
+const sumYear = movies.reduce((acc, e) => acc + Number(e.Year), 0); //Number(e.year) è necessario in quanto Year dentro movies è una stringa
+console.log(sumYear);
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
