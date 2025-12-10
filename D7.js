@@ -1,3 +1,7 @@
+// APPUNTI
+
+//Con il ciclo REDUCE vanno dichiarati due elementi: il primo, denomicato accumulatore, sarà la variabile che si incrementa ad ogni ciclo; il secondo invece acquisisce il valore della variabile corrente del ciclo da eventualmente sommare all' accumulatore
+
 /* ESERCIZIO 1
   Scrivi una funzione per concatenare due stringhe ricevute come parametri, selezionando solamente i primi 2 caratteri della
   prima e gli ultimi 3 della seconda. Converti la stringa risultante in maiuscolo e mostrala con un console.log().
