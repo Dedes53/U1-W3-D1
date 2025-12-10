@@ -4,7 +4,7 @@
 */
 function concStrings(a, b) {
   const a1 = a.slice(0, 2); //mertodo per prendere i primi due caratteri. 0 da dove partiamo e due il numero di posizioni della stringa
-  const b1 = b.slice(-3);
+  const b1 = b.slice(-3); //con indice negativo parte dal fondo per un totale di elementi quanto indicato dall' indice
   const newString = (a1 + b1).toUpperCase();
   return console.log(newString);
 }
@@ -241,8 +241,8 @@ console.log(onlyCurrentMillennium(movies));
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
-const sumYear = movies.reduce((acc, e) => acc + Number(e.Year), 0); //Number(e.year) è necessario in quanto Year dentro movies è una stringa
-console.log(sumYear);
+const reduceYear = movies.reduce((acc, e) => acc + Number(e.Year), 0); //Number(e.year) è necessario in quanto Year dentro movies è una stringa
+console.log(reduceYear);
 
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
